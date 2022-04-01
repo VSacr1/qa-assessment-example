@@ -15,25 +15,25 @@ def test_two():
     assert python2.one([]) == {}
     assert python2.one(['bert']*1000) == {'bert':1000}
 
-def test_two():
+def test_three():
     for a, b in [ (5, 3), (3, 1.5), (-5, 7) , (0, 1) ]:
         for operator in ['+', '-', '*', '/']:
             assert python2.two(a, b, operator) == eval(f'{a} {operator} {b}')
 
-def test_three():
+def test_four():
     assert python2.three(7) == 4
     assert python2.three(64) == 64
     assert python2.three(32) == 25
     assert python2.three(1) == python2.three(2) == 1
 
-def test_four():
+def test_five():
     assert python2.four(32, 24) == 8
     assert python2.four(18, 11) == 1
     assert python2.four(10, 50) == 10
     assert python2.four(1, 1) == 1
     assert python2.four(2, 2048) == 2
 
-def test_five():
+def test_six():
     assert python2.five('wxyz') == 'vwxy'
     assert python2.five('abc') == 'zab'
     assert python2.five('aAbB') == 'zZaA'
