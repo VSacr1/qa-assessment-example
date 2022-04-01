@@ -9,7 +9,7 @@ def test_endsPy():
     assert example.endsPy("hurrayforpY") == True
     
     
-def test_two():
+def test_one():
     assert python2.one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']) == {'apple':3, 'orange':2, 'banana':1}
     assert python2.one(['tic', 'tac', 'toe']) == {'tic':1, 'tac':1, 'toe':1}
     assert python2.one([]) == {}
