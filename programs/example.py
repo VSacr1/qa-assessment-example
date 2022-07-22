@@ -15,8 +15,11 @@
     
     
 def endsPy(input):
-    #Insert some code here 
-    return True
+    lower_case = input.lower()
+    if lower_case.endswith("py"):
+        return True
+    else: 
+        return False
 
     
 # <QUESTION 2>
@@ -32,7 +35,13 @@ def endsPy(input):
 # one(['tic', 'tac', 'toe']) → {'tic':1, 'tac':1, 'toe':1}
     
 def one(items):
-    pass
+    empty_dictionary = {}
+    for item in items: 
+        print(item)
+        empty_dictionary[item] = items.count(item)
+        print(empty_dictionary)
+    return empty_dictionary
+
 
 # <QUESTION 3>
 
@@ -49,7 +58,14 @@ def one(items):
 # two(-5, 2, '/') → -2.5
 
 def two(a, b, operator):
-    pass
+    if operator == "+":
+        return a + b 
+    elif operator == "-":
+        return a - b
+    elif operator == "/":
+        return a / b
+    elif operator == "*":
+        return a * b
 
 # <QUESTION 4>
 
@@ -69,7 +85,14 @@ def two(a, b, operator):
 # We can use `x ** 0.5` to get the square root of `x`
 
 def three(num):
-    pass
+    y = 0
+    while num > 0: 
+        x = num ** 0.5 
+        if x - int(x) == 0: 
+            y = num
+            break
+        num -= 1
+    return y
 
 # <QUESTION 5>
 
